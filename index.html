@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UT8">
+    <link rel="icon" href="favicon.ico" />
+    <title>Notes</title>
+  </head>
+  <body>
+    <!--
+    a title (e.g. "Pomodoro Timer First Brainstorm")
+    subtitle for the meeting section/the topic of the meeting (e.g. "brainstorming", "check-ins", "documentation")
+    subtitle for the date
+    attendance list
+    agenda of what the meeting will cover
+    things that were unfinished business from last meeting
+    things that are new business that need to be talked about
+    any miscellaneous comments / questions / concerns that anyone would like to bring up
+    pictures of any diagrams / architecture / things that were presented
+    SWE meetings often have people diagram things on a whiteboard so we want those captured as well
+    For the following two, you can simply take a 30 second pretend audio recording & video recording to use, we are just trying to get you familiar with the <audio> and <video> elements. Yes, you must have both audio and video elements, and yes, you can use the audio from the video you took for the audio element, it just has to be in a separate audio file.
+        audio recording the meeting
+        video recording of the meeting
+-->
+    <header>
+        <nav>
+            <h1>Home</h1>
+        </nav>
+    </header>
+    <main>
+        <h1>CSE 110 Meeting notes</h1>
+        <h2>Meeting Info</h2>
+        <h3>Attendance List</h3>
+        <ul>
+            <li>Lucas Hlaing</li>
+            <li>Michael Chen</li>
+            <li>Justin Chan</li>
+        </ul>
+        <h3>Last meeting Summary</h3>
+        <p>
+            Tasks were divided between members with Lucas handling <strong>frontend</strong>, Michael <strong>backend</strong> and Justin handling <strong>testing.</strong> 
+            <br>Need to look over <b>Figma design</b> and decide on transitions.
+        </p>
+        <h3>Current Meeting Agenda</h3>
+        <ol>
+            <li>Provide updates on current tasks</li>
+            <li>Deal with graphics and fonts</li>
+            <li>Decide small design details </li>
+        </ol>
+        <hr>
+        <h2>Current Meeting</h2>
+        <h3>Unfinished business from last meeting</h3>
+        <ul>
+            <li>Deciding on theme colors for website. The current options : <i>#14526A</i> or <i>#A14153</i></li>
+        </ul>
+        <h3>New Business for this meeting</h3>
+        <ul>
+            <li>Decide what graphics to add</li>
+            <li>Talk about possibility of integrating <em>OpenAI API</em></li>
+        </ul>
+        <h3>Concerns for future</h3>
+        <ul>
+            <li>Direction we are headed, whether we want to continue using simple HTML or integrate <a href="https://react.dev/">React</a></li>
+            <li>Ask for advice from other teams for <span>current implementation</span></li>
+        </ul>
+
+        <h3>Recordings + Images</h3>
+        <img width="320" src="neural_net.png" alt="Neural Nets"> 
+        <br>
+        <p>Sample video</p>
+        <video width="320" height="240" controls>
+            <source src="20250410_224043.mp4" type="video/mp4">
+            Video could not be played.
+        </video> <br>
+        <p>Sample Audio</p>
+        <audio controls>
+            <source src="20240930_233347.mp3" type="audio/mp3">
+            Audio could not be played.
+        </audio>
+
+        <h3>Miscellaneous comments</h3>
+        <details>
+            <summary>Hangout Plans</summary>
+            <p>Justin wants to organize a hangout next weekend at his place. Invited Lucas and Michael.</p>
+        </details>
+    </main>
+    <hr>
+    <footer>
+        <p>Contact me for errors with the code</p>
+        <form>
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+            
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate"><br><br>
+            
+                <label>Sex:</label> <br>
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Info</legend>
+                <label for="hobby">Hobbies</label>
+                <textarea id="hobby" name="hobby"></textarea> <br><br>
+                <label for="color">Favorite Color:</label>
+                <input list="colors" id="color" name="color">
+                <datalist id="colors">
+                  <option value="Red">
+                  <option value="Blue">
+                  <option value="Green">
+                </datalist><br><br>
+
+                <label for="grade">Select your grade:</label>
+                <select id="grade" name="grade">
+                <option value="freshman">Freshman</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Final Bits</legend>
+                <p>Subscribe to news letter?</p>
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">Yes</label> <br>
+            </fieldset>
+            <button>Submit</button>
+        </form>
+    </footer>
+  </body>
+</html>
