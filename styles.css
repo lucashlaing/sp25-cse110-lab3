@@ -1,0 +1,261 @@
+/* 
+  CSS for CSE 110 Meeting Notes Page
+  This stylesheet implements all CSS requirements from the lab checklist
+*/
+
+/*
+
+Color                                              
+✔ rgb(r, g, b) or rgba(r, g, b, a)     
+✔ #FFF or #FFFFFF                     
+✔ hsl(h, s, l) or hsla(h, s, l, a)       
+✔ Color name (i.e ‘orange’)
+Wider-gamut color:
+✔ color(colorspace c1 c2 c3[ / A])     
+✔ color-mix(method, color1[ p1], color2[ p2])  
+
+CSS Variables & Fallbacks
+✔ Show at least one example of using a CSS variable that also has a fallback. 
+
+Background    
+✔ background-color
+ 
+
+Units    
+✔ ✔ ✔ Use 3 unique relative units total
+✔ ✔ ✔ Use 3 unique absolute units total
+ 
+
+Box Model     
+(“long” and “short” refer to longhand and shorthand syntax and should give the same results. They’re simply different ways to declare your style rules, use at least one of each syntax. You must use both long and short hand notations for each of the following: margin, padding, border) 
+Margin    
+✔ Long (margin-top, margin-bottom, margin-left, margin-right)
+✔ Short (margin: <top> <right> <bottom> <left>)
+Auto margins: margin: auto
+ 
+Padding     
+✔ Long (padding-top, padding-bottom, padding-left, padding-right)
+✔ Short (padding: <top> <right> <bottom> <left>)
+ 
+Borders     /* borders around html elements, hint: apply borders before testing out padding and margin to better understand the difference between the two 
+✔ border-style
+✔ border-color
+✔ border-width
+✔ border-radius
+
+Text     
+✔ color
+✔ text-decoration
+✔ text-align
+
+Display
+✔ Experiment with these values: none, block, inline-block, inline. Include at least two of them in your page.
+Apply these values to the display property
+
+Sizing     
+✔ height
+✔ width
+✔ max-width
+✔ min-width 
+
+Position
+✔ ✔ 2 of the following values: static, relative, fixed, absolute, sticky
+Apply these values to the position property
+
+Pseudo-class
+✔ :hover
+✔ :active
+
+Layouts
+✔ Flexbox 
+apply flex to the display property
+Must have more than two children within the element that is using flexbox. Must use minimum three of the flexbox related attributes
+✔ Grid         
+apply grid to the display property
+Must have more than two children within the element that is using the grid. Must use a minimum of three of the grid related attributes
+
+Responsiveness       
+At least one query based on the screen width
+✔ Media Query
+Check the DevTools in your browser! Make sure your site works and looks fine on the three main types of form factors (Very small screen (phone), tablet or smaller laptop, and desktop).
+The layout of your page should automatically reflow when the size changes, meaning, we shouldn't have to pinch and zoom in a lot to read text, click buttons, etc.
+
+
+✔ Fonts    
+Include and use a 3rd party font (https://fonts.google.com/Links to an external site.). You can load the font in either your HTML or your CSS
+
+
+CSS Selectors
+
+✔ Class Selector (.class)
+✔ ID Selector (#id)
+✔ Universal Selector (*)
+✔ Element Selector (element) 
+✔ Attribute Selector (e.g. [attribute=foo])     
+Pseudo-class Selector (e.g. p:hover)
+✔ Selector List (element, element)                   /* select multiple elements 
+
+Combinators (you must use one of each)    /* specify selections based on element positioning in the DOM tree 
+✔ Descendant Combinator (element element)
+✔ Child Combinator (element > element)
+✔ General sibling combinator (element ~ element)
+✔ Adjacent sibling combinator (element + element)
+✔ Combining Two Selectors (element.class)
+New Selectors 
+✔ :has()  /*You must use this selector. Click hereLinks to an external site. for how to use. This is a new selector that was widely adopted in 2023.
+Nested Selectors
+✔ Nested selectors are another type of selector that have recently been adopted in 2023. HereLinks to an external site. is some more information about this selector. Please also include at least one type of this selector in your CSS.
+
+*/
+
+
+  /* Importing Google Font (3rd party font) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* fallback */
+    color: black;
+    background-color: #f9f9f9;
+    line-height: 1cm;
+    padding: 20px;
+}
+
+#main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  position: relative;
+}
+
+header nav {
+    background-color: rgb(240, 240, 255);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Position alteration 1 */
+.floating-element {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Flex layout */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.flex-container > div {
+    border-radius: 1pc;
+    text-align: center;
+    background-color: hsl(128, 57%, 65%);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .grid-container > div {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    border-style: dotted;
+    border-width: 0.2cap;
+    border-color: color-mix(in srgb, blue 24%, red 76%);
+
+    text-align: center;
+  }
+
+  /* Attribute Selector - the react thingy */
+[href^="https"] {
+    color: color(display-p3 0 0.5 1);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h3 ~ p {
+    font-style: italic;
+    color: #555;
+}
+  
+
+h3 + ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+  
+span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+strong {
+    display: inline;
+    color: #A14153;
+}
+
+li.important {
+    font-weight: bold;
+    color: #A14153;
+}
+
+ul:has(> li.important) {
+    background-color: rgba(161, 65, 83, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card {
+    & p {
+      color: #555;
+    }
+}
+
+
+a:hover {
+    color: #A14153;
+    text-decoration: underline;
+}
+
+button:active {
+    background-color: #333;
+    color: white;
+}
+
+/* Media Query - minimal version */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
