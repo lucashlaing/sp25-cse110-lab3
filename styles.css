@@ -185,26 +185,26 @@ h1, h2, h3 {
   }
   
   .grid-container > div {
-    background-color: #f0f0f0;
+    background-color: color-mix(in srgb, blue 24%, red 76%);
     padding: 1rem;
     border-radius: 5px;
     border-style: dotted;
     border-width: 0.2cap;
-    border-color: color-mix(in srgb, blue 24%, red 76%);
+    border-color: #f0f0f0;
 
     text-align: center;
   }
 
   /* Attribute Selector - the react thingy */
 [href^="https"] {
-    color: color(display-p3 0 0.5 1);
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
 }
 
 h3 ~ p {
     font-style: italic;
-    color: #555;
+    color: #555555;
 }
   
 
@@ -215,7 +215,7 @@ h3 + ul {
   
 span {
     display: inline-block;
-    background-color: #e0e0e0;
+    background-color: color(display-p3 0 0.5 1) ;
     padding: 0 5px;
     border-radius: 3px;
 }
